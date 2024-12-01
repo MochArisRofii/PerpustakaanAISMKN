@@ -21,6 +21,6 @@ Proyek ini bertujuan untuk memberikan kemudahan kepada siswa dan guru di SMKN 9 
 ## 🛠️ Instalasi
 1. **Clone Repository**
    ```bash
-   git clone 
+   git clone https://github.com/MochArisRofii/PerpustakaanAISMKN
 
    
