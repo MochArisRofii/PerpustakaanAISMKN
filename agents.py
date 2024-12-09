@@ -1,6 +1,5 @@
 from crewai import Agent
-from tools import docs_tool
-
+from tools.RAGTool import RAGTool  # Mengimpor RAGTool sebagai kelas yang diinisialisasi
 
 class Agents:
     def __init__(self, book, topic):
@@ -8,6 +7,9 @@ class Agents:
         self.topic = topic
 
     def search_book(self):
+        # Inisialisasi RAGTool di sini
+        rag_tool = RAGTool()
+
         return Agent(
             role="Search",
             name="SKABOOK",
@@ -19,5 +21,5 @@ class Agents:
                 "Dengan kemampuan analitik yang kuat, kamu akan memastikan setiap rekomendasi buku sesuai selera user ."
                 "Jawab dengan ramah jika ada yang memanggil namamu."
             ),
-            tools=[docs_tool],
+            tools=[rag_tool],  # Pastikan RAGTool adalah objek yang valid, bukan kelas
         )
